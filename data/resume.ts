@@ -14,7 +14,6 @@ function getExperienceMonths(startDate: Date, bufferMonths: number): number {
     (target.getMonth() - startDate.getMonth());
 
   if (target.getDate() < startDate.getDate()) months -= 1;
-
   return Math.max(months, 0);
 }
 
@@ -29,20 +28,21 @@ function formatExperienceLabel(): string {
 
 export const profile = {
   name: "Harishkumar M",
-  role: "Software Developer",
-  tagline: "PHP · Laravel · Drupal 10/11 · React",
+  role: "Full-Stack Developer",
+  tagline: "PHP · Laravel · Drupal · React · Next.js · Node.js",
   location: "Coimbatore, Tamil Nadu, India",
   email: "harishpmkumar2002@gmail.com",
   phone: "+91 8526309986",
-  summary: `Software developer with ${formatExperienceLabel()} years building scalable web applications in PHP, Laravel, Drupal 10/11, and React. Focused on custom module development, REST API integration, payment gateways, AWS infrastructure, and MySQL performance tuning — with a habit of shipping tools other developers reuse, like a data-export module built for CSV, XLSX, PDF, and DOCX output.`,
+  summary:
+    "Software developer with nearly 3 years of professional development experience, specializing in PHP, Laravel, and Drupal, with additional full-stack project experience using React, Next.js, Node.js, Express, and MongoDB. Experienced in building REST APIs, custom CMS modules, database-driven workflows, authentication features, and third-party integrations. Focused on maintainable code, practical problem-solving, and responsive web applications.",
   resumeFile: "/resume.pdf",
 };
 
 export const stats = [
-  { label: "years_experience", value: formatExperienceLabel() },
-  { label: "production_modules", value: "3" },
-  { label: "export_formats_shipped", value: "4" },
-  { label: "stack_depth", value: "PHP→React" },
+  { label: "experience", value: formatExperienceLabel() },
+  { label: "development", value: "Full-Stack" },
+  { label: "tech_stack", value: "Laravel · Drupal · MERN" },
+  { label: "projects", value: "8+" },
 ];
 
 export const experience = [
@@ -53,12 +53,14 @@ export const experience = [
     period: "Feb 2024 — Present",
     status: "current",
     points: [
-      "Developed scalable web applications using PHP, Laravel, Drupal 10/11, and React.",
-      "Built and customized Drupal modules, themes, and content types for production sites.",
-      "Designed and integrated REST APIs and third-party services including Razorpay and PayPal.",
-      "Worked with AWS S3 and IAM for secure file storage and access management.",
-      "Designed and optimized MySQL databases and SQL queries for performance.",
-      "Collaborated with frontend developers, QA engineers, and project managers in an Agile team.",
+      "Develop and maintain web applications using PHP, Laravel, Drupal 10/11, JavaScript, and modern frontend technologies.",
+      "Build and customize Drupal modules, forms, content structures, reusable components, and application functionality.",
+      "Develop and integrate REST APIs, backend services, and third-party integrations, including Razorpay and PayPal.",
+      "Build full-stack application features using React, Next.js, Node.js, and Express.js, with MongoDB and SQL databases.",
+      "Work with MySQL, MariaDB, and PostgreSQL to manage application data, implement database workflows, and optimize SQL queries.",
+      "Integrate AWS services, including S3 and IAM, for file storage and access management.",
+      "Implement authentication, role-based access control, and responsive user interfaces across application workflows.",
+      "Use Git for version control and collaborate with developers, QA engineers, and project stakeholders to deliver and maintain web applications.",
     ],
   },
   {
@@ -68,80 +70,194 @@ export const experience = [
     period: "Feb 2023 — Apr 2023",
     status: "past",
     points: [
-      "Developed backend APIs and enhanced frontend interfaces using JavaScript, HTML, and CSS.",
-      "Worked with AWS services including CodeCommit, CloudWatch, DynamoDB, and S3.",
-      "Collaborated using Git and Linux in a small development team.",
+      "Contributed to backend APIs and frontend interfaces using JavaScript, HTML, and CSS.",
+      "Gained hands-on experience with AWS services, including CodeCommit, CloudWatch, DynamoDB, and S3.",
+      "Used Git and Linux while collaborating with a small development team.",
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "Drupal Data Export Module",
-    tag: "open-source-flavored utility",
-    stack: ["Drupal 10", "PHP", "MySQL", "AJAX", "PhpSpreadsheet", "TCPDF"],
+    name: "Placement Pro",
+    tag: "Student placement preparation platform",
+    category: "Full-stack application",
+    stack: ["Laravel", "Next.js", "PostgreSQL", "Redis", "AI APIs", "AWS S3"],
     description:
-      "A reusable Drupal module that exports records to CSV, XLSX, PDF, and DOCX with dynamic field selection, custom SQL queries, and configurable export options — built into Drupal's admin interface following core coding standards.",
+      "A student placement preparation platform covering assessments, aptitude practice, programming challenges, coding practice, and AI-assisted interview preparation.",
     points: [
-      "Dynamic header configuration and field selection at export time",
-      "Custom SQL query support for advanced data slices",
-      "Robust error handling for large dataset exports",
+      "Developed Laravel APIs for assessments, practice activities, and student progress workflows.",
+      "Managed PostgreSQL data for assessment records and progress tracking.",
+      "Used Redis caching and integrated AI APIs and AWS S3 for supporting application features.",
+      "Integrated communication gateways and application usage tracking.",
     ],
   },
   {
     name: "Bill Mastr",
-    tag: "billing & inventory system",
-    stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "REST API"],
+    tag: "Billing and inventory management",
+    category: "Business application",
+    stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "REST APIs"],
     description:
-      "A billing and inventory management system for retail shops, covering product, vendor, tax, and invoice management with role-based access control and an admin dashboard for sales and reporting.",
+      "A billing and inventory management system supporting retail operations, including products, vendors, taxes, invoices, user access, and sales reporting.",
     points: [
-      "Role-based access control for employees and admins",
-      "REST APIs with query optimization for dashboard performance",
-      "Admin dashboard for real-time sales and revenue visibility",
+      "Implemented product, vendor, tax, and invoice management workflows.",
+      "Structured role-based access for employees and administrators.",
+      "Built API-driven functionality and dashboard views for sales and reporting.",
+    ],
+  },
+  {
+    name: "WP CRM",
+    tag: "Multi-tenant CRM",
+    category: "CRM application",
+    stack: ["PHP", "MySQL", "AWS S3", "Payment Gateway", "RBAC"],
+    description:
+      "A CRM application for managing companies, contacts, products, and users, with tenant-aware access controls and customer purchasing workflows.",
+    points: [
+      "Built company, contact, product, and user management workflows.",
+      "Implemented role-based access control and tenant-specific data handling.",
+      "Added product and cart functionality, payment gateway integration, and AWS S3 file storage.",
+    ],
+  },
+  {
+    name: "Food Revive",
+    tag: "Surplus food marketplace",
+    category: "MERN application",
+    stack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Razorpay"],
+    description:
+      "A marketplace application connecting food vendors and customers through food listings, discovery, ordering, and payment workflows.",
+    points: [
+      "Developed REST API workflows for authentication, food listings, and orders.",
+      "Connected the React frontend with backend endpoints using the Fetch API.",
+      "Implemented JWT-based authentication and role-aware access controls.",
+      "Integrated Razorpay payment workflow support.",
+    ],
+  },
+  {
+    name: "Real-Time Chat & Collaboration",
+    tag: "Live messaging application",
+    category: "MERN application",
+    stack: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "Socket.IO",
+      "JWT",
+      "Bootstrap",
+    ],
+    description:
+      "A real-time messaging application with authenticated users, private conversations, and live message delivery.",
+    points: [
+      "Implemented authentication and protected API workflows using JWT.",
+      "Built conversation and message APIs backed by MongoDB.",
+      "Used Socket.IO for real-time message communication.",
+      "Developed a responsive chat interface using React and Bootstrap.",
+    ],
+    url: "https://github.com/Harishpmkumar/realtime-chat-collaboration",
+  },
+  {
+    name: "Drupal Data Export Module",
+    tag: "Reusable Drupal utility",
+    category: "Drupal module",
+    stack: ["Drupal 10", "PHP", "MySQL", "AJAX", "PhpSpreadsheet", "TCPDF"],
+    description:
+      "A Drupal module for exporting records into CSV, XLSX, PDF, and DOCX formats, with configurable fields and export options.",
+    points: [
+      "Supports dynamic field selection and export header configuration.",
+      "Provides custom SQL query support for advanced data selection.",
+      "Includes error handling for export workflows and large datasets.",
     ],
   },
   {
     name: "Custom Paragraphs",
-    tag: "published Drupal.org module",
+    tag: "Published Drupal.org module",
+    category: "Drupal module",
     stack: ["Drupal 10/11", "PHP", "JavaScript", "CKEditor 5", "Form API"],
     description:
-      "A lightweight, JS-powered repeatable field group system for custom Drupal forms — lets developers add dynamic, repeatable inputs (multiple addresses, team members, documents) without entity-based overhead.",
+      "A JavaScript-powered repeatable field group for Drupal forms, enabling developers to collect multiple related values without creating a separate entity for each group.",
     points: [
-      "Dynamic add/remove fields with client-side validation",
-      "File uploads with preview and CKEditor 5 integration",
-      "JSON-based data storage for lightweight, form-level repeatable groups",
+      "Supports dynamic add/remove fields and client-side validation.",
+      "Includes file-upload previews and CKEditor 5 integration.",
+      "Uses JSON-based storage for lightweight form-level repeatable groups.",
     ],
     url: "https://www.drupal.org/project/custom_paragraphs",
   },
   {
     name: "Content Like",
-    tag: "published Drupal.org module",
+    tag: "Published Drupal.org module",
+    category: "Drupal module",
     stack: ["Drupal 10/11/12", "PHP", "AJAX", "Twig"],
     description:
-      "An AJAX-powered like/unlike module for Drupal content, supporting both authenticated users and anonymous visitors with duplicate-like prevention and lazy builder rendering.",
+      "An AJAX-powered like/unlike module for Drupal content, supporting authenticated users and anonymous visitors with duplicate-like prevention.",
     points: [
-      "Tracks authenticated users by Drupal user ID, anonymous visitors via hashed cookie",
-      "Unique-key database constraint prevents duplicate likes",
-      "Configurable per content type and custom block type, with default and custom Twig support",
+      "Supports identification of authenticated users and anonymous visitors.",
+      "Uses a unique database constraint to help prevent duplicate likes.",
+      "Supports configuration by content type and custom Twig output.",
     ],
     url: "https://www.drupal.org/project/content_like",
   },
 ];
 
 export const skills = {
-  Languages: ["PHP", "JavaScript", "HTML5", "CSS3"],
-  Frameworks: ["Laravel", "Drupal 10/11", "React", "Bootstrap", "jQuery"],
-  Database: ["MySQL"],
-  CMS: ["Drupal", "WordPress"],
-  Cloud: ["AWS S3", "AWS IAM", "CloudWatch", "DynamoDB", "CodeCommit"],
-  Tools: ["Git", "Composer", "Postman", "XAMPP"],
+  "Programming Languages": ["PHP", "JavaScript", "HTML5", "CSS3"],
+  "Frontend Development": [
+    "React",
+    "Next.js",
+    "React Hooks",
+    "Bootstrap",
+    "jQuery",
+    "Responsive UI",
+    "Fetch API",
+  ],
+  "Backend Development": [
+    "Laravel",
+    "Node.js",
+    "Express.js",
+    "Drupal",
+    "REST APIs",
+    "MVC Architecture",
+    "Middleware",
+  ],
+  "Drupal Development": [
+    "Drupal 10/11",
+    "Custom Module Development",
+    "Forms API",
+    "Entity API",
+    "Database API",
+    "AJAX API",
+    "Hooks",
+    "Plugins",
+    "Services",
+    "Caching",
+    "Twig",
+    "Drush",
+  ],
+  Databases: ["MySQL", "MariaDB", "PostgreSQL", "MongoDB", "Mongoose"],
+  "Authentication & Real-Time": [
+    "JWT",
+    "bcrypt",
+    "Role-Based Access Control",
+    "Protected Routes",
+    "Socket.IO",
+    "WebSockets",
+  ],
+  "Integrations & Cloud": [
+    "Razorpay",
+    "PayPal",
+    "Third-Party APIs",
+    "AWS S3",
+    "AWS IAM",
+    "CloudWatch",
+    "DynamoDB",
+  ],
+  Tools: ["Git", "GitHub", "Composer", "npm", "Postman", "Vite", "XAMPP"],
 };
 
 export const education = {
   degree: "B.E. — Computer Science and Engineering",
   school: "Park College of Engineering and Technology",
   period: "Aug 2019 — Jun 2023",
-  detail: "CGPA: 8.3",
+  detail: "CGPA: 8.3/10",
 };
 
 export const certifications = [
@@ -160,7 +276,6 @@ export const exportFields = [
 export const socials = [
   { label: "Email", href: `mailto:${profile.email}` },
   { label: "Phone", href: `tel:${profile.phone.replace(/\s/g, "")}` },
-  // Add your real profiles here:
   { label: "GitHub", href: "https://github.com/Harishpmkumar" },
   {
     label: "LinkedIn",

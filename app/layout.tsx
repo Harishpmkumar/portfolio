@@ -24,10 +24,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.role}`,
   description: profile.summary,
-  metadataBase: new URL("https://example.netlify.app"),
+  metadataBase: new URL("https://harishkumar-m-portfolio.netlify.app"),
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
     description: profile.summary,
+    url: "https://harishkumar-m-portfolio.netlify.app",
+    siteName: `${profile.name} Portfolio`,
     type: "website",
   },
 };
@@ -38,7 +40,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="font-body antialiased">{children}</body>
     </html>
   );
